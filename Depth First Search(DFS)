@@ -1,0 +1,25 @@
+# Searching
+# DFS
+#include<iostream>
+#include<stack>
+using namespace std;
+
+void DFS(int** graph,int start,int n,bool* visited)
+{
+stack<int>s;
+s.push(start);
+visited[start]=True;
+while(!s.empty()){
+int vertex=s.top();
+s.pop();
+cout<<vertex<<" ";
+for(int i=0;i<n;i++)
+{
+if(graph[vertex][i] && !visited[i])
+{
+s.push(i);
+visited[i]=True;
+}
+}
+}
+}
