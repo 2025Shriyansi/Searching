@@ -1,0 +1,31 @@
+# Searching
+# Binary Search
+function binarySearch(arr,x)
+{
+int i;
+let left=0;
+let right=arr.length -1;
+while(left <= right)
+{
+left mid=Math.floor((left+right)/2);
+if(arr[mid]==x)
+{
+return mid;
+}else if(arr[mid]<x){
+left=mid+1;
+}
+else{
+right=mid-1;
+}
+}return -1;
+}
+int arr={1,2,3,4,5};
+int x=4;
+int result=binarySearch(arr,x);
+if(result== -1)
+{
+cout<<"Element is not present"<<endl;
+}
+else{
+cout<<"Element is found"<<endl;
+}
